@@ -1,8 +1,8 @@
 import streamlit as st
 import csv
 from rdkit.Chem import Draw, MolFromSmiles
-from scripts.inference import Inference
-from scripts.helper import plot_horizonatal_bar_chart
+from drug_interaction_predictor.scripts.inference import Inference
+from drug_interaction_predictor.scripts.helper import plot_horizonatal_bar_chart
 import os
 
 #Title
@@ -78,7 +78,7 @@ if st.checkbox("Check this box to read the instructions."):
 #Read drug list to load
 drug_list = {}
 
-smiles_dictionary_path = os.path.join('helper_files', 'smiles_dictionary.csv')
+smiles_dictionary_path = os.path.join('drug_interaction_predictor\helper_files', 'smiles_dictionary.csv')
 with open(smiles_dictionary_path) as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     i = 0

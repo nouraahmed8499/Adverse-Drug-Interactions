@@ -1,8 +1,7 @@
 import random
 import pandas as pd
 import torch
-from torch.utils.data import Dataset, DataLoader
-
+from torch.utils.data import Dataset
 from drug_interaction_predictor.smiles_transformer.enumerator import SmilesEnumerator
 from drug_interaction_predictor.smiles_transformer.utils import split
 

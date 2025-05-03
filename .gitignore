@@ -6,6 +6,8 @@
 *.exe
 *.o
 *.so
+test.py
+test.ipynb
 
 # Models #
 ##########
@@ -48,4 +50,4 @@ Thumbs.db
 
 # virtualenv #
 ################
-venv 
+venv

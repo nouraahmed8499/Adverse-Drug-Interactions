@@ -1,14 +1,13 @@
-from scripts.helper import *
 import collections
 import timeit
 import streamlit as st
 import pprint
-from scripts.inference import *
-from scripts.interaction_labelling import *
-from scripts.feature_generation import *
-from scripts.read_data import *
+from drug_interaction_predictor.scripts.inference import *
+from drug_interaction_predictor.scripts.interaction_labelling import *
+from drug_interaction_predictor.scripts.feature_generation import *
+from drug_interaction_predictor.scripts.read_data import *
 from sklearn.model_selection import train_test_split
-from scripts.model import *
+from drug_interaction_predictor.scripts.model import *
 from keras.utils import CustomObjectScope, plot_model
 from keras.models import load_model
 from sklearn.metrics import *

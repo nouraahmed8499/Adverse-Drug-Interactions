@@ -1,4 +1,4 @@
-from scripts.helper import *
+from drug_interaction_predictor.scripts.helper import *
 import collections
 
 if __name__ == '__main__':
@@ -9,7 +9,10 @@ if __name__ == '__main__':
 
     print('Reading drugs ...')
     #import XML Data - From link source
-    drug_list, smiles_dict = read_from_file('../data/sample/drug_split11.xml')
+    drug_list, smiles_dict = read_from_file(r'drug_interaction_predictor\data\sample\drug_split11.xml')
+    print('Drugs read : ', len(drug_list))
+    print('Drug list : ', drug_list)
+    print('SMILES dict : ', smiles_dict)
     #drug_list, smiles_dict = read_from_file('../data/sample/full_database.xml')
     print('Drugs read : ', len(drug_list))
 
@@ -59,7 +62,7 @@ if __name__ == '__main__':
     print(counter)
     y_label_dist = pd.DataFrame(counter.items())
 
-    y_label_dist.to_csv("./logs/label_distribution.csv")
+    y_label_dist.to_csv("drug_interaction_predictor/logs/label_distribution.csv")
 
 
     middle = timeit.default_timer()

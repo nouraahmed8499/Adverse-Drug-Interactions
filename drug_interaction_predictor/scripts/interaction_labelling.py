@@ -1,4 +1,4 @@
-from scripts.labels import *
+from drug_interaction_predictor.scripts.labels import *
 import csv
 
 # File to extract particular keywords from textual description of interactions.
